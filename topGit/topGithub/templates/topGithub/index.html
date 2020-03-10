@@ -23,7 +23,7 @@
 
                 <div class="form-group">
                     <label for="pwd">Top Repos Count (n):</label>
-                    <input type="number" min="1" max="1000" class="form-control" name="top_repos">
+                    <input type="number" min="1" max="15" class="form-control" name="top_repos">
                 </div>
 
                 <div class="form-group">
@@ -34,61 +34,70 @@
                   <input type="submit" class="btn btn-info" value="Submit">
             </form>
             <hr>
-            <h2>{{organisation}}</h2>      
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    
-                    <th>Repo Name</th>
-                    <th>Forks</th>
-                </tr>
-                </thead>
                 
-                    <tbody>
-                        {% for name1 in data %}
-                            
-                                <tr>
-                                     <td><a href="#" style="text-decoration: none;"> {{ name1.name }} </a></td>
-                                    <td>{{ name1.forks }}</td>
-                                </tr>
-                           
-                            
-                        {% endfor %}
-                    </tbody>
-            </table>
-
-            <br>
-            <br>
-            <h2>Contributers</h2>
-            <hr>
-
-            {% for repo in contribute %}
-            <h3> {{ repo.repoName }} </h3>
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    
-                    <th>Userame</th>
-                    <th>Commits</th>
-                    <th>Profile URL</th>
-                </tr>
-                </thead>
-                
-                    <tbody>
-                        {% for profile in repo.values %}
-                            <tr>
-                                <td>{{profile.name}}</td>
-                                <td>{{profile.num}}</td>
-                                <td> <a href= {{ profile.url }} style="text-decoration: none;"> {{ profile.url }} </a></td>
-                            </tr>
-                        {% endfor %}   
-                            
+            {% if check %}
+                <h2>{{organisation}}</h2>      
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
                         
-                    </tbody>
-            </table>
-            <hr>
-            {% endfor %}
+                        <th>Repo Name</th>
+                        <th>Forks</th>
+                    </tr>
+                    </thead>
+                    
+                        <tbody>
+                            {% for name1 in data %}
+                                
+                                    <tr>
+                                        <td><a href="#" style="text-decoration: none;"> {{ name1.name }} </a></td>
+                                        <td>{{ name1.forks }}</td>
+                                    </tr>
+                            
+                                
+                            {% endfor %}
+                        </tbody>
+                </table>
+
+                <br>
+                <br>
+                <h2>Contributers</h2>
+                <hr>
+
+                {% for repo in contribute %}
+                <h3> {{ repo.repoName }} </h3>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        
+                        <th>Userame</th>
+                        <th>Commits</th>
+                        <th>Profile URL</th>
+                    </tr>
+                    </thead>
+                    
+                        <tbody>
+                            {% for profile in repo.values %}
+                                <tr>
+                                    <td>{{profile.name}}</td>
+                                    <td>{{profile.num}}</td>
+                                    <td> <a href= {{ profile.url }} style="text-decoration: none;"> {{ profile.url }} </a></td>
+                                </tr>
+                            {% endfor %}   
+                                
+                            
+                        </tbody>
+                </table>
+                <hr>
+                {% endfor %}
             
+            {% else %}
+                <div class="alert alert-danger" role="alert">
+                    Repository Doesn't Exist!
+                </div>
+            {% endif %}
+
+
 
       </div>
 
