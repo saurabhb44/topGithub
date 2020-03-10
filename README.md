@@ -3,6 +3,8 @@ Django Webapp, using GitHub API to display
 1) Top N Repositories of a given Organisation based on their forks count and
 2) For each resultant Repository, display top committers based on their commits count.
 
+![Main](https://github.com/saurabhb44/topGithub/blob/master/Screenshots/SS1.png)
+
 Usage:
 1. Clone Repository
 2. Make sure Django & Python is installed on your PC
@@ -19,11 +21,11 @@ So make sure the total sum for Top Repositories (n) do not exceed 60, for that h
 Test Cases:
 GOOGLE, n:5, m:3
 
-![Google](https://github.com/saurabhb44/topGithub/blob/master/topGit/Screenshots/Google.png)
+![Google](https://github.com/saurabhb44/topGithub/blob/master/Screenshots/Google.png)
 
 MICROSOFT, n:6, m:4
 
-![Microsoft](https://github.com/saurabhb44/topGithub/blob/master/topGit/Screenshots/Microsoft.png)
+![Microsoft](https://github.com/saurabhb44/topGithub/blob/master/Screenshots/Microsoft.png)
 
 
 Thank You
