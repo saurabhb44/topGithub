@@ -1,14 +1,16 @@
 import requests
 
-
+#Function which Returns top n repos of a given organisation
 def top_n_repos(username,n):
     
+    #Calling Github API
     url = 'https://api.github.com/search/repositories?q=user:' + username + '+fork:true&sort=forks&order=desc&page=1&per_page=100'
     res=requests.get(url)
     repos=res.json()
     
     dict = []
 
+    #Check if the User exists and returns if not
     if repos == {
         "message": "Validation Failed",
         "errors": [
@@ -28,19 +30,24 @@ def top_n_repos(username,n):
 
     results = 100
 
+    #If total results exceed 100, next pages are demamded
     while 'next' in res.links.keys():
+        
+        #result may be greater than we require, so this if will only show us required amount results
         if results >= n:
             break
         res=requests.get(res.links['next']['url'])
         repos['items'].extend(res.json()['items'])
         results+=100
     
+    #Append items in return variable
     for x in repos['items']:
         dict += [{
-            'name': x['name'], 'forks': x['forks']
+            'name': x['name'],
+            'forks': x['forks']
         }]
-        # dict+=obj
         n-=1
+        
         if n==0:
             break
     
