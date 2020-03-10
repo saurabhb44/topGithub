@@ -27,5 +27,10 @@ MICROSOFT, n:6, m:4
 
 ![Microsoft](https://github.com/saurabhb44/topGithub/blob/master/Screenshots/Microsoft.png)
 
+When Username Doesn't Exist
+Ex: "wewefhgj"
+
+![DNE](https://github.com/saurabhb44/topGithub/blob/master/Screenshots/DNE.png)
+
 
 Thank You
