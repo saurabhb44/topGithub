@@ -15,11 +15,9 @@ python manage.py runserver`
 6. Enter a Valid GitHub profile username and n,m.
 7. Boom... Results Displayed
 
-```
 NOTE:<br>
 Github API limits the API calling to 60 calls/hour for Core API & for 10 calls/Min for Search API. "Search" is called to find top repos & "Core" is called to find top Committers. So make sure the total sum for Top Repositories (n) do not exceed 60, for that hour.
 For E.g, if we take "google", "n:5" & "m:4", then for top 5 repos search API will be called once (remaining search attempts 9/10 for that minute), but to find 4 top contributers of the resultant repos, the core API will be called 5 times, once for each repo (remaining core attempts 55/60 for that hour).
-```
 
 Test Cases:
 GOOGLE, n:5, m:3
