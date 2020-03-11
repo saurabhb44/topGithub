@@ -8,7 +8,7 @@ Django Webapp, using GitHub API to display
 Usage:
 1. Clone Repository
 2. Make sure Django & Python is installed on your PC
-3. In terminal, change directory to Local_Directory/topGithub/topGit (manage.py file must be there).
+3. In terminal, change directory to Local_Directory -> topGithub -> topGit (Check that manage.py file must be there).
 4. Run command: `
 python manage.py runserver`
 5. Open browser and search in address bar for <http://localhost:8000/>
