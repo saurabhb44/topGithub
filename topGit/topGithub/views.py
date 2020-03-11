@@ -37,7 +37,7 @@ def index(request):
                 names.append(name)
 
             #Filling top Committers data for each reposiroty
-            for i in range(int(n)):
+            for i in range(len(lists)):
                 obj = {
                     'repoName': names[i]['name'],
                     'values': contributers.top_m_contributers(username,names[i]['name'],int(m))
