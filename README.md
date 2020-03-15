@@ -29,19 +29,26 @@ Django Webapp, using GitHub API to display
 * You will be redirected to *your* fork, `https://github.com/<your_user_name>/topGithub`
 * Open the terminal, change to the directory where you want to clone the **topGithub** repository
 * Clone your repository using `git clone https://github.com/<your_user_name>/topGithub`
-* Enter the cloned directory using `cd topGithub/`
+* Enter the cloned directory using `cd topGithub-master/topGit`
 
 ### Setting up environment
 
-* Create a virtual environment  
-  * on **Ubuntu**: `virtualenv env -p python3.6`  
-  * on **Windows Powershell**: `virtualenv env`
-* Activate the *env*
-  * on **Ubuntu**: `source env/bin/activate`  
-  * on **Windows Powershell**: `. .\env\scripts\activate`
 * Install Pip
   * on **Ubuntu**: `sudo apt install python-pip`
   * on **Windows Powershell**: Install from: `https://bootstrap.pypa.io/get-pip.py`
+
+* Create a virtual environment  
+  * on **Ubuntu**:
+    *  `python3 -m pip install --user virtualenv`
+    *  `python3 -m venv env`
+  * on **Windows Powershell**:
+    *  `python -m pip install --user virtualenv`
+    *  `python -m venv env`
+
+* Activate the *env*
+  * on **Ubuntu**: `source env/bin/activate`  
+  * on **Windows Powershell**: `.\env\scripts\activate`
+
 * Install the requirements: `pip install -r requirements.txt`
 
 ### Running server
