@@ -25,10 +25,8 @@ Django Webapp, using GitHub API to display
 
 ### Downloading the Code
 
-* Go to (<https://github.com/saurabhb44/topGithub>) and click on **Fork**
-* You will be redirected to *your* fork, `https://github.com/<your_user_name>/topGithub`
 * Open the terminal, change to the directory where you want to clone the **topGithub** repository
-* Clone your repository using `git clone https://github.com/<your_user_name>/topGithub`
+* Clone your repository using `git clone https://github.com/saurabhb44/topGithub`
 * Enter the cloned directory using `cd topGithub-master/topGit`
 
 ### Setting up environment
