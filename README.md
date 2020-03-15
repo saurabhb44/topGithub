@@ -5,15 +5,55 @@ Django Webapp, using GitHub API to display
 
 ![Main](https://github.com/saurabhb44/topGithub/blob/master/Screenshots/SS1.PNG)
 
+## Software Requirements
+
+* Python `3.6`
+* Git
+
+## How to get started
+
+* on **Ubuntu**:
+  * Install the required packages using the following command :  
+    `sudo apt install python3.6-dev python-virtualenv build-essential git`
+
+* on **Windows**:
+  * Get Python 3.6.8 from [here](https://www.python.org/ftp/python/3.6.8/python-3.6.8-amd64.exe) for AMD64/x64 or [here](https://www.python.org/ftp/python/3.6.8/python-3.6.8.exe) for x86
+  * Git from [here](https://git-scm.com/download/win)
+  * Install both using the downloaded `exe` files  
+
+  **Important:** Make sure to check the box that says **Add Python 3.x to PATH** to ensure that the interpreter will be placed in your execution path
+
+### Downloading the Code
+
+* Go to (<https://github.com/saurabhb44/topGithub>) and click on **Fork**
+* You will be redirected to *your* fork, `https://github.com/<your_user_name>/topGithub`
+* Open the terminal, change to the directory where you want to clone the **topGithub** repository
+* Clone your repository using `git clone https://github.com/<your_user_name>/topGithub`
+* Enter the cloned directory using `cd topGithub/`
+
+### Setting up environment
+
+* Create a virtual environment  
+  * on **Ubuntu**: `virtualenv env -p python3.6`  
+  * on **Windows Powershell**: `virtualenv env`
+* Activate the *env*
+  * on **Ubuntu**: `source env/bin/activate`  
+  * on **Windows Powershell**: `. .\env\scripts\activate`
+* Install Pip
+  * on **Ubuntu**: `sudo apt install python-pip`
+  * on **Windows Powershell**: Install from: `https://bootstrap.pypa.io/get-pip.py`
+* Install the requirements: `pip install -r requirements.txt`
+
+### Running server
+
+* Change directory to **topGithub**: In terminal, change directory to Local_Directory -> topGithub-master -> topGit (Check that manage.py file must be there). `cd topGit`
+* Run the server `python manage.py runserver`
+
 Usage:
-1. Clone Repository
-2. Make sure Django & Python is installed on your PC
-3. In terminal, change directory to Local_Directory -> topGithub-master -> topGit (Check that manage.py file must be there).
-4. Run command: `
-python manage.py runserver`
-5. Open browser and search in address bar for <http://localhost:8000/>
-6. Enter a Valid GitHub profile username and n,m.
-7. Boom... Results Displayed
+
+* Open browser and search in address bar for <http://localhost:8000/>
+* Enter a Valid GitHub profile username and n,m.
+* Boom... Results Displayed
 
 NOTE:<br>
 Github API limits the API calling to 60 calls/hour for Core API & for 10 calls/Min for Search API. "Search" is called to find top repos & "Core" is called to find top Committers. So make sure the total sum for Top Repositories (n) do not exceed 60, for that hour.
